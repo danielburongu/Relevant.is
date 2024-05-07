@@ -1,0 +1,530 @@
+:root {
+    --color-primary: rgb(207, 0, 64);
+    --color-white: #0c0101;
+    --color-black: #ffffff;
+    --color-black-1: #212b38;
+  }
+  
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: sans-serif;
+   
+  }
+  
+  .logo {
+    color: var(--color-white);
+    font-size: 30px;
+  }
+  
+  .logo span {
+    color: var(--color-primary);
+  }
+  
+  .menu-bar {
+    background-color: var(--color-black);
+    height: 80px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 5%;
+  
+    position: relative;
+  }
+  
+  .menu-bar ul {
+    list-style: none;
+    display: flex;
+  }
+  
+  .menu-bar ul li {
+    /* width: 120px; */
+    padding: 10px 30px;
+    /* text-align: center; */
+  
+    position: relative;
+  }
+  
+  .menu-bar ul li a {
+    font-size: 20px;
+    color: var(--color-white);
+    text-decoration: none;
+  
+    transition: all 0.3s;
+  }
+  
+  .menu-bar ul li a:hover {
+    color: var(--color-primary);
+  }
+  
+  .fas {
+    float: right;
+    margin-left: 10px;
+    padding-top: 3px;
+  }
+  
+  /* dropdown menu style */
+  .dropdown-menu {
+    display: none;
+  }
+  
+  .menu-bar ul li:hover .dropdown-menu {
+    display: block;
+    position: absolute;
+    left: 0;
+    top: 100%;
+    background-color: var(--color-black);
+  }
+  
+  .menu-bar ul li:hover .dropdown-menu ul {
+    display: block;
+    margin: 10px;
+  }
+  
+  .menu-bar ul li:hover .dropdown-menu ul li {
+    width: 150px;
+    padding: 10px;
+  }
+  
+  .dropdown-menu-1 {
+    display: none;
+  }
+  
+  .dropdown-menu ul li:hover .dropdown-menu-1 {
+    display: block;
+    position: absolute;
+    left: 150px;
+    top: 0;
+    background-color: var(--color-black);
+  }
+  
+  .hero {
+    /*height: calc(100vh - 80px);*/
+    min-height: 100vh;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.7)),url(images/relevant\ bkg3.jpeg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    display: flex;
+    flex-direction: column;
+    justify-content: stretch;
+  }
+
+  /* Our Mission Section */
+  #our-mission {
+    padding: 4rem 0; /* Adjust padding around the section */
+    background-color: var(--white-smoke); /* Optional background color */
+  }
+
+  #our-mission div {
+    max-width: 1200px; /* Adjust the max-width to control content width */
+    margin: 0 auto; /* Center the content */
+    padding: 1rem; /* Optional padding */
+    text-align: center; /* Center align the text */
+  }
+
+  #our-mission h1 {
+    font-size: 2.5rem; /* Adjust font size for the header */
+    color: var(--night-rider); /* Optional: Color of the header */
+    margin-bottom: 1.5rem; /* Add space below the header */
+  }
+
+  #our-mission .text {
+    font-size: 1.2rem; /* Adjust font size for the paragraph text */
+    color: var(--night-rider); /* Color of the paragraph text */
+    line-height: 1.6; /* Adjust line height for readability */
+  }
+
+
+
+
+
+
+
+  /* Team Section */
+  #team {
+    padding: 4rem 0; /* Adjust the padding for the section */
+    background-color: var(--white-smoke); /* Optional background color */
+  }
+
+  #team .container {
+    max-width: 1200px; /* Adjust the width as needed */
+    margin: 0 auto;
+  }
+
+  #team .title {
+    text-align: center; /* Center the title */
+    margin-bottom: 2rem; /* Add space below the title */
+  }
+
+  #team .title h2 {
+    font-size: 2.5rem; /* Adjust the font size for the title */
+    color: var(--night-rider); /* Optional: Color of the title */
+  }
+
+  #team .title .text {
+    font-size: 1.2rem; /* Adjust the font size for the subtitle */
+    color: var(--black); /* Optional: Color of the subtitle */
+  }
+
+  #team .row {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* 4 columns */
+    gap: 20px; /* Space between each team item */
+    justify-content: center; /* Center align the grid */
+    margin-top: 2rem; /* Add space above the row */
+  }
+
+  .team-item {
+    text-align: center; /* Center align the team item */
+    border-radius: 10px; /* Optional: Rounded corners */
+    box-shadow: 0 2px 10px rgba(19, 15, 15, 0.1); /* Optional: Shadow effect */
+    overflow: hidden; /* Hide overflow if necessary */
+    transition: transform 0.3s; /* Smooth hover effect */
+  }
+
+  .team-item:hover {
+    transform: translateY(-5px); /* Move up on hover */
+    box-shadow: 0 10px 20px rgba(14, 76, 184, 0.15); /* Add shadow */
+  }
+
+  .team-img {
+    width: 100%; /* Full width of the container */
+  }
+
+  .team-img img {
+    width: 50%; /* Full width of the image */
+    height: auto; /* Maintain aspect ratio */
+    border-radius: 50%; /* Circular images */
+  }
+
+  .team-info {
+    padding: 10px; /* Add padding around the text */
+  }
+
+  .team-info h3 {
+    font-size: 1.0rem; /* Adjust font size */
+    color: rgb(207, 0, 64); /* Color of the team member's name */
+    margin: 0.5rem 0; /* Adjust margins */
+  }
+  /*relevant activities cards*/
+  /* Relevant Activities Cards */
+  .card-container {
+    display: grid; /* Use grid layout */
+    grid-template-columns: repeat(3, 1fr); /* Create 3 equal columns */
+    gap: 20px; /* Space between each card */
+    justify-content: center;
+    margin-top: 100px; /* Adjust space at the top of the container */
+  }
+
+  .card {
+    background-color: #f0f0f0; /* Background color */
+    border-radius: 8px; /* Rounded corners */
+    overflow: hidden; /* Hide overflow */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* Subtle shadow effect */
+    padding: 16px; /* Optional padding */
+    text-align: center; /* Center align text */
+  }
+
+  .card img{
+    width: 100%; /* Full width of the card */
+    height: auto; /* Maintain aspect ratio */
+    border-radius: 8px; /* Rounded corners for the image */
+  }
+
+  .card-content {
+    padding: 16px; /* Padding around the card content */
+  }
+
+  .card-content h3 {
+    font-size: 1.5rem; /* Adjust font size as desired */
+    margin-bottom: 8px; /* Space below the header */
+    color: var(--night-rider); /* Color of the card header */
+  }
+
+  .card-content p {
+    color: #666; /* Text color */
+    font-size: 1rem; /* Adjust font size as desired */
+    line-height: 1.5; /* Line height for readability */
+  }
+
+  .card-content .btn {
+    display: inline-block;
+    padding: 10px 20px; /* Padding for the button */
+    background-color: rgb(207, 0, 64); /* Button background color */
+    color: #fff; /* Button text color */
+    text-decoration: none;
+    border-radius: 4px; /* Rounded corners */
+    margin-top: 16px; /* Space above the button */
+    transition: background-color 0.3s; /* Smooth transition for hover */
+  }
+
+  .card-content .btn:hover {
+    background-color: #555; /* Darken button on hover */
+  }
+
+ 
+
+
+
+
+  /* Clients & Partners Section */
+  /* Clients & Partners Section */
+  .Clients {
+    padding: 4rem 0; /* Adjust padding for the entire section */
+    background-color: var(--white-smoke); /* Optional background color */
+  }
+
+  .Clients .container {
+    max-width: 1200px; /* Control the width of the container */
+    margin: 0 auto; /* Center the container */
+    padding: 0 20px; /* Optional horizontal padding */
+  }
+
+  .Clients .title {
+    text-align: center; /* Center the title */
+    margin-bottom: 2rem; /* Add space below the title */
+  }
+
+  .Clients .title h2 {
+    font-size: 2.5rem; /* Adjust the font size of the title */
+    color: var(--night-rider); /* Optional: Color of the title */
+  }
+
+  .Clients .title .text {
+    font-size: 1.2rem; /* Adjust the font size of the subtitle */
+    color: var(--night-rider); /* Optional: Color of the subtitle */
+    line-height: 1.6; /* Line height for readability */
+  }
+
+  /* Layout adjustments for multi-column layout */
+  .one-row {
+    display: grid; /* Use grid layout */
+    grid-template-columns: repeat(4, 1fr); /* Create 4 equal columns */
+    gap: 20px; /* Space between each column */
+    justify-content: center; /* Center the grid within the container */
+    align-items: center; /* Center the client items vertically */
+    margin: 0; /* Remove top margin */
+    padding: 0; /* Remove padding */
+  }
+
+  .Clients-item {
+    text-align: center; /* Center-align text */
+    transition: transform 0.3s; /* Smooth transition effect */
+  }
+
+  .Clients-item:hover {
+    transform: translateY(-5px); /* Move up slightly on hover */
+  }
+
+  .Clients-img {
+    display: flex; /* Use flex layout to center content */
+    justify-content: center; /* Center the image */
+    align-items: center; /* Center the image */
+  }
+
+  .Clients-img img {
+    width: 100px; /* Adjust size as needed */
+    height: auto; /* Adjust size as needed */
+    /*border-radius: 50%; /* Circular shape */
+    /*border: 3px solid #fc0349; /* Red border around the circle */
+    /*display: block; /* Treat the image as a block element */
+    cursor: pointer;
+  }
+
+  .Clients-item a {
+    display: block; /* Make the link fill the entire item */
+    width: 100%; /* Fill the width of the client item */
+    text-decoration: none; /* Remove underline from the link */
+  }
+
+
+  /* Relevant Partner Section */
+  .partners {
+    padding: 4rem 0; /* Adjust padding for the entire section */
+    background-color: var(--white-smoke); /* Optional background color */
+  }
+
+  .partners .container {
+    max-width: 1200px; /* Control the width of the container */
+    margin: 0 auto; /* Center the container */
+    padding: 0 20px; /* Optional horizontal padding */
+  }
+
+  .partners .title {
+    text-align: center; /* Center the title */
+    margin-bottom: 2rem; /* Add space below the title */
+  }
+
+  .partners .title h2 {
+    font-size: 2.5rem; /* Adjust the font size of the title */
+    color: var(--night-rider); /* Optional: Color of the title */
+  }
+
+  .partners .title .text {
+    font-size: 1.2rem; /* Adjust the font size of the subtitle */
+    color: var(--night-rider); /* Optional: Color of the subtitle */
+    line-height: 1.6; /* Line height for readability */
+  }
+
+  /* Layout adjustments for multi-column layout */
+  .single-row {
+    display: grid; /* Use grid layout */
+    grid-template-columns: repeat(4, 1fr); /* Create 4 equal columns */
+    gap: 20px; /* Space between each column */
+    justify-content: center; /* Center the grid within the container */
+    align-items: center; /* Center the partner items vertically */
+    margin: 0; /* Remove top margin */
+    padding: 0; /* Remove padding */
+  }
+
+  .partner-item {
+    text-align: center; /* Center-align text */
+    transition: transform 0.3s; /* Smooth transition effect */
+  }
+
+  .partner-item:hover {
+    transform: translateY(-5px); /* Move up slightly on hover */
+  }
+
+  .partner-img {
+    display: flex; /* Use flex layout to center content */
+    justify-content: center; /* Center the image */
+    align-items: center; /* Center the image */
+  }
+
+  .partner-img img {
+    width: 100px; /* Adjust size as needed */
+    height: auto; /* Adjust size as needed */
+    /*border-radius: 50%; /* Circular shape */
+    /*border: 3px solid #fc0349; /* Red border around the circle */
+    /*display: block; /* Treat the image as a block element */
+    filter: grayscale(100%); /* Apply grayscale filter to make images black and white */
+    cursor: pointer;
+  }
+
+  .partner-item a {
+    display: block; /* Make the link fill the entire item */
+    width: 100%; /* Fill the width of the partner item */
+    text-decoration: none; /* Remove underline from the link */
+  }
+
+  
+
+  /* Contact Section */
+.contact {
+  padding: 4rem 0; /* Adjust padding as needed */
+  background-color: var(--white-smoke); /* Background color */
+}
+
+.contact h2 {
+  text-align: center; /* Center-align the heading */
+  font-size: 2.5rem; /* Adjust the font size of the heading */
+  color: var(--night-rider); /* Text color */
+  margin-bottom: 2rem; /* Space below the heading */
+}
+
+.contact-grid {
+  display: grid; /* Use grid layout */
+  grid-template-columns: repeat(2, 1fr); /* Two columns */
+  gap: 2rem; /* Space between columns */
+  margin: 0 auto; /* Center the grid */
+  max-width: 1200px; /* Control the width of the grid */
+}
+
+.contact-form {
+  background-color: #b75f5f; /* Background color */
+  padding: 2rem; /* Padding around the form */
+  border-radius: 8px; /* Rounded corners */
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+}
+
+.contact-form h3 {
+  font-size: 1.8rem; /* Adjust the font size */
+  margin-bottom: 1rem; /* Space below the heading */
+}
+
+.contact-form input,
+.contact-form textarea {
+  width: 100%; /* Full width */
+  padding: 0.8rem; /* Padding around inputs */
+  margin-bottom: 1rem; /* Space below inputs */
+  border: 1px solid var(--grey); /* Border color */
+  border-radius: 4px; /* Rounded corners */
+  outline: none; /* Remove focus outline */
+  font-size: 1rem; /* Font size */
+}
+
+.contact-form button {
+  background-color: #f0f0f0; /* Button background color */
+  color: var(--white-smoke); /* Button text color */
+  padding: 0.8rem 2rem; /* Padding around button */
+  border: none; /* Remove border */
+  border-radius: 4px; /* Rounded corners */
+  cursor: pointer; /* Change cursor to pointer */
+  font-size: 1rem; /* Font size */
+  transition: background-color 0.3s; /* Smooth transition */
+}
+
+.contact-form button:hover {
+  background-color: darken(var(--mount-meadow), 10%); /* Darken the button color on hover */
+}
+
+.contact-info {
+  padding: 2rem; /* Padding around contact info */
+  border-radius: 8px; /* Rounded corners */
+  background-color: #b75f5f; /* Background color */
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+}
+
+.contact-info h3 {
+  font-size: 1.8rem; /* Adjust the font size */
+  margin-bottom: 1rem; /* Space below the heading */
+}
+
+.contact-info p {
+  font-size: 1rem; /* Adjust the font size */
+  line-height: 1.5; /* Line height for readability */
+}
+
+.contact-info iframe {
+  width: 100%; /* Full width */
+  height: 300px; /* Height for iframe */
+  border: none; /* Remove border */
+  margin-top: 1rem; /* Space above the iframe */
+}
+
+/* Footer Section */
+.footer {
+  padding: 2rem 0; /* Adjust padding */
+  background-color: var(--night-rider); /* Footer background color */
+  color: var(--white-smoke); /* Footer text color */
+  text-align: center; /* Center-align text */
+}
+
+.footer p {
+  font-size: 1rem; /* Adjust the font size */
+  margin-bottom: 1rem; /* Space below the text */
+}
+
+.social-links {
+  display: flex; /* Use flexbox layout */
+  justify-content: center; /* Center the links */
+  gap: 1rem; /* Space between links */
+}
+
+.social-links a {
+  color: var(--white-smoke); /* Link color */
+  font-size: 1.5rem; /* Icon size */
+  transition: color 0.3s; /* Smooth transition */
+}
+
+.social-links a:hover {
+  color: var(--mount-meadow); /* Color change on hover */
+}
